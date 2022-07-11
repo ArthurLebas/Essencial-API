@@ -12,7 +12,7 @@ router.route('/')
  * GET /api/user
  * @summary To get all users with their photos
  * @tags User
- * @return {User} 200 - success response
+ * @return {object} 200 - success response
  * @return {object} 400 - input data invalid
  */
 .get(userController.getAllWithPhotos)
