@@ -20,7 +20,7 @@ POST {{ endpoint }}/connexion
 Content-Type:application/json
 
 {
-    "email": "Apolline1@gmail.com",
+    "email": "Iseult39@hotmail.fr",
     "password": "test"
 }
 
