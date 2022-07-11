@@ -1,6 +1,6 @@
 # Swagger API documentation
 
-<https://essencial-api.herokuapp.com/api-docs/#/>
+<https://essencial-own.herokuapp.com/api-docs/>
 
 ## !! WARNING !!
 
