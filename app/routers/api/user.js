@@ -33,7 +33,7 @@ router.route('/create')
  * POST /api/user/create
  * @summary To create one user
  * @tags User
- * @param {object} request.body.required - user object with all user's info + path: (photo path)
+ * @param {User} request.body.required - user object with all user's info + path: (photo path)
  * @return {object} 200 - success response
  * @return {object} 400 - input data invalid
  */
