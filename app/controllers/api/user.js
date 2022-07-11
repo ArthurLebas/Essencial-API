@@ -60,14 +60,7 @@ const userController = {
 
             const result = await userDatamapper.findOneWithPhoto(userId)
 
-
             console.log("one user result on controller --->" , result)
-            delete result.first_name
-            delete result.last_name
-            delete result.phone_number
-            delete result.address
-            delete result.zip_code
-            delete result.city
 
             if(!result){
                 return result.json({message:`There is no user with id: ${userId}`})
