@@ -46,19 +46,11 @@ class User extends CoreDatamapper {
     async findAllWithPhoto(){
         const preparedQuery = {
             text: `
-            SELECT "user".id,
-                    "user".email,
-                    "user".description,
-                    "user".first_name,
-                    "user".last_name,
-                    "user".pseudo,
-                    "user".date_of_birth,
-                    "user".phone_number,
-                    "user".address,
-                    "user".region,
-                    "user".zip_code,
-                    "user".city,
-                    "photo".path
+            SELECT "user".email,
+            "user".description,
+            "user".pseudo,
+            "user".region,
+            "photo".path
             FROM "${this.tableName}"
             JOIN "photo" ON "user".id = "photo".user_id`
         }
