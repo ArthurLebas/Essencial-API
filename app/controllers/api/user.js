@@ -60,6 +60,8 @@ const userController = {
 
             const result = await userDatamapper.findOneWithPhoto(userId)
 
+            console.log("one user result on controller --->" , result)
+
             if(!result){
                 return result.json({message:`There is no user with id: ${userId}`})
                 /* throw new ApiError(`There is no user with id ${user.id}`, { statusCode: 404 }); */

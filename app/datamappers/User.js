@@ -75,15 +75,8 @@ class User extends CoreDatamapper {
             text: `
             SELECT "user".email,
                    "user".description,
-                   "user".first_name,
-                   "user".last_name,
                    "user".pseudo,
-                   "user".date_of_birth,
-                   "user".phone_number,
-                   "user".address,
                    "user".region,
-                   "user".zip_code,
-                   "user".city,
                    "photo".path
             FROM "${this.tableName}"
             JOIN "photo" ON "user".id = "photo".user_id
