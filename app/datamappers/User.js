@@ -52,7 +52,8 @@ class User extends CoreDatamapper {
             "user".region,
             "photo".path
             FROM "${this.tableName}"
-            JOIN "photo" ON "user".id = "photo".user_id`
+            JOIN "photo" ON "user".id = "photo".user_id
+            WHERE "user".rights <> "admin"`
         }
         const result = await this.client.query(preparedQuery)
         if (!result.rows[0]) {
