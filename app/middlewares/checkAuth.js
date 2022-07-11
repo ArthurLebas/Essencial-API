@@ -4,6 +4,7 @@ require('dotenv').config();
 
 function checkLog(req,res,next) {
     let token = req.headers['authorization'] || req.headers.access_token;
+    console.log("token from checkAuth -->" , token);
     if(token == null){
         return res.status(401).send("unauthorized");
     }
