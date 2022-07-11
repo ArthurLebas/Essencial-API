@@ -4,8 +4,9 @@
 # https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 ################################################################################
 
-@endpoint = http://localhost:3000/api
+#@endpoint = http://localhost:3000/api
 #@endpoint = https://essencial-api.herokuapp.com/api
+@endpoint = https://essencial-own.herokuapp.com/api
 
 ### Test d'une route introuvable
 GET {{ endpoint }}/ujnlkcsdcs
