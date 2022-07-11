@@ -22,7 +22,6 @@ const connexionController = {
                 throw Error("you must send an email and a password")
             }
             const userResult = await userDatamapper.findByEmail(userOrEcovil)
-            console.log("result from connexion controller --->",userResult);
             if(!userResult){
                 const ecovilResult = await ecovillageDatamapper.findByEmail(userOrEcovil)
                 if(!ecovilResult){
@@ -45,6 +44,8 @@ const connexionController = {
                         ecovilResult.type = "ecovillage"
         
                         const accessToken = jwt.sign(ecovilResult, process.env.ACCESS_TOKEN_SECRET, {expiresIn: 3600})
+                        
+                        console.log("je passe dans le true");
             
                         return res.json({
                                 logged: true,
