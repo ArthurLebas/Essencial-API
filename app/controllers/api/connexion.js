@@ -22,7 +22,7 @@ const connexionController = {
                 throw Error("you must send an email and a password")
             }
             const userResult = await userDatamapper.findByEmail(userOrEcovil)
-            console.log("result from connexion controller --->",result);
+            console.log("result from connexion controller --->",userResult);
             if(!userResult){
                 const ecovilResult = await ecovillageDatamapper.findByEmail(userOrEcovil)
                 if(!ecovilResult){
