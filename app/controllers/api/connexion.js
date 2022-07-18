@@ -22,6 +22,7 @@ const connexionController = {
                 throw Error("you must send an email and a password")
             }
             const userResult = await userDatamapper.findByEmail(userOrEcovil)
+            console.log("userResult --->", userResult);
             if(!userResult){
                 const ecovilResult = await ecovillageDatamapper.findByEmail(userOrEcovil)
                 if(!ecovilResult){
@@ -62,6 +63,7 @@ const connexionController = {
 
 
             } else {
+                console.log("je passe dans le else: il y'a un userResult");
                 bcrypt.compare(userOrEcovil.password, userResult.password)
                 .then(function(result) {
                     if(result == true){
