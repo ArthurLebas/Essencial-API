@@ -27,6 +27,7 @@ const connexionController = {
                 if(!ecovilResult){
                     throw Error('Invalid email or password')
                 }
+                console.log("je passe au dessus de bcrypt");
                 bcrypt.compare(userOrEcovil.password, ecovilResult.password)
                 .then(function(result){
                     if(result == true){
@@ -44,7 +45,7 @@ const connexionController = {
                         ecovilResult.type = "ecovillage"
         
                         const accessToken = jwt.sign(ecovilResult, process.env.ACCESS_TOKEN_SECRET, {expiresIn: 3600})
-                        
+
                         console.log("je passe dans le true");
             
                         return res.json({
