@@ -10,7 +10,7 @@ function checkLog(req,res,next) {
     }
     const [, headerToken] = token.split(' ');
 
-    jwt.verify(headerToken, process.env.ACCESS_TOKEN_SECRET, (err,response) => {
+    jwt.verify(headerToken, process.env.ACCESS_TOKEN_SECRET || `${process.env.ACCESS_TOKEN_SECRET}`, (err,response) => {
         if (err) {
             return res.status(403).send('fordbiden');
         }
