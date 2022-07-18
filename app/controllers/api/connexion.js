@@ -45,6 +45,9 @@ const connexionController = {
                         delete ecovilResult.website
                         ecovilResult.type = "ecovillage"
         
+                        console.log(process.env.ACCESS_TOKEN_SECRET);
+                        console.log(ecovilResult);
+                        
                         const accessToken = jwt.sign(ecovilResult, process.env.ACCESS_TOKEN_SECRET, {expiresIn: 3600})
 
                         console.log("je passe dans le true");

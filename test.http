@@ -20,7 +20,7 @@ POST {{ endpoint }}/connexion
 Content-Type:application/json
 
 {
-    "email": "Garance41@gmail.com",
+    "email": "Iseult39@hotmail.fr",
     "password": "test"
 }
 
@@ -30,8 +30,6 @@ Content-Type:application/json
 /////////////////////////////////////////////////
 ///////////////////   USER   ///////////////////
 ////////////////////////////////////////////////
-
-
 
 ### Test de la route pour récupérer tous les utilisateurs (avec leurs photos)
 GET {{ endpoint }}/user
